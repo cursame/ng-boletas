@@ -22,8 +22,6 @@ function setStyles () {
                 if ( !e ) {
                     fs.writeFileSync( path.join( __dirname, 'css', 'style.css' ), output.css );
                 }
-
-                process.exit();
             });
         };
 

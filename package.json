@@ -9,7 +9,8 @@
         "url"       : "git+https://github.com/cursame/ng-boletas"
     },
     "scripts"       : {
-        "start"         : "node startup.js && concurrently \"npm run tsc:w\" \"npm run lite\" ",
+        "app"           : "node startup.js",
+        "start"         : "concurrently \"npm run tsc:w\" \"npm run lite\" \"npm run app\" ",
         "lite"          : "lite-server",
         "tsc"           : "tsc",
         "tsc:w"         : "tsc -w",
