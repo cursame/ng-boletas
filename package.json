@@ -1,0 +1,36 @@
+{
+    "name"          : "ng-boletas",
+    "version"       : "1.0.0",
+    "description"   : "Angular 2 web client for the cursame boletas service.",
+    "main"          : "index.js",
+    "private"       : true,
+    "repository"    : {
+        "type"      : "git",
+        "url"       : "git+https://github.com/cursame/ng-boletas"
+    },
+    "scripts"       : {
+        "start"     : "DEBUG=app node index.js"
+    },
+    "bugs"          : {
+        "url"       : "https://github.com/cursame/ng-boletas/issues"
+    },
+    "dependencies"  : {
+        "bcrypt"            : "0.8.6",
+        "body-parser"       : "1.15.0",
+        "buildify"          : "0.4.0",
+        "debug"             : "2.2.0",
+        "express"           : "4.14.0",
+        "jsonfile"          : "2.3.1",
+        "less"              : "2.7.1",
+        "livereload"        : "0.4.1",
+        "method-override"   : "2.3.5",
+        "mkdirp"            : "0.5.1",
+        "morgan"            : "1.7.0",
+        "mongoose"          : "4.5.3",
+        "multiparty"        : "4.1.2",
+        "node-watch"        : "0.3.5",
+        "pug"               : "2.0.0-beta3",
+        "rimraf"            : "2.5.2",
+        "wiredep"           : "4.0.0"
+    }
+}
