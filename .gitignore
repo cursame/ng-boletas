@@ -1,8 +1,8 @@
 .DS_Store
 .tmp
 npm-debug.log
-app/*.js
-app/*.map
+app/**/*.js
+app/**/*.map
 node_modules/
 typings/
 bower_components/
