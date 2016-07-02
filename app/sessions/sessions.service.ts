@@ -9,6 +9,10 @@ import {
     } from '@angular/http';
 
 import {
+        CookieService
+    } from 'angular2-cookie/core';
+
+import {
         config
     } from '../config';
 import {
@@ -20,7 +24,7 @@ export class SessionsService {
 
     private sessionsUrl : string;
 
-    constructor( private http : Http ) {
+    constructor( private http : Http, private cookie : CookieService ) {
         this.sessionsUrl    = config.api_url + 'sessions';
     }
 
@@ -32,7 +36,11 @@ export class SessionsService {
         return this.http.post( this.sessionsUrl, JSON.stringify( credentials ), {
                     headers: headers
                 }).toPromise()
-                .then( res => res.json() )
+                .then( res => {
+                    this.cookie.putObject( 'session', res.json() );
+
+                    return res.json();
+                })
                 .catch( this.handleError );
     }
 
