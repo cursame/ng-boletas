@@ -18,6 +18,9 @@ import {
 import {
         Credentials
     } from './credentials';
+import {
+        Session
+    } from './session';
 
 @Injectable()
 export class SessionsService {
@@ -29,7 +32,7 @@ export class SessionsService {
     }
 
     public getToken() {
-        let session     = this.cookie.getObject( 'session' );
+        let session = <Session>this.cookie.getObject( 'session' );
         return session ? session.token : null;
     }
 
@@ -42,9 +45,12 @@ export class SessionsService {
                     headers: headers
                 }).toPromise()
                 .then( res => {
-                    this.cookie.putObject( 'session', res.json() );
+                    let data    = res.json();
+                    let session = new Session( data.token, data.user_id, data.school, data.access_level );
 
-                    return res.json();
+                    this.cookie.putObject( 'session', session );
+
+                    return session;
                 })
                 .catch( this.handleError );
     }
