@@ -28,6 +28,11 @@ export class SessionsService {
         this.sessionsUrl    = config.api_url + 'sessions';
     }
 
+    public getToken() {
+        let session     = this.cookie.getObject( 'session' );
+        return session ? session.token : null;
+    }
+
     public start( credentials : Credentials ) {
         let headers     = new Headers({
                 'Content-Type'  : 'application/json'
@@ -38,6 +43,23 @@ export class SessionsService {
                 }).toPromise()
                 .then( res => {
                     this.cookie.putObject( 'session', res.json() );
+
+                    return res.json();
+                })
+                .catch( this.handleError );
+    }
+
+    public terminate( token : string ) {
+        let headers     = new Headers({
+                'Content-Type'  : 'application/json'
+            });
+        let url         = `${ this.sessionsUrl }/${ token }`;
+
+        return this.http.delete( url, {
+                    headers: headers
+                }).toPromise()
+                .then( res => {
+                    this.cookie.remove( 'session' );
 
                     return res.json();
                 })

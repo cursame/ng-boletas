@@ -6,7 +6,7 @@ import {
     } from '@angular/router';
 
 import {
-    TranslateService
+        TranslateService
     } from 'ng2-translate/ng2-translate';
 
 import {
@@ -18,24 +18,21 @@ import {
 
 @Component({
     selector    : 'user-login',
-    templateUrl : 'views/sessions/login.html',
-    providers   : [
-        SessionsService
-    ]
+    templateUrl : 'views/sessions/login.html'
 })
 export class LoginComponent {
 
     credentials : Credentials   = new Credentials();
 
-    constructor( private router : Router, private sessions : SessionsService, private translate : TranslateService ) {}
+    constructor( private _router : Router, private _session : SessionsService, private _translate : TranslateService ) {}
 
-    login() {
-        this.sessions.start( this.credentials )
+    public login() {
+        this._session.start( this.credentials )
             .then( data => {
-                this.router.navigate([ '/dashboard' ]);
+                this._router.navigate([ '/dashboard' ]);
             })
             .catch( error => {
-                swal( this.translate.instant( 'title.login_error' ), this.translate.instant( 'message.login_error' ), 'error' );
+                swal( this._translate.instant( 'title.login_error' ), this._translate.instant( 'message.login_error' ), 'error' );
             });
     }
 }

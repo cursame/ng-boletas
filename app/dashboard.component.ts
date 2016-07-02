@@ -1,9 +1,35 @@
 import {
         Component
     } from '@angular/core';
+import {
+        Router
+    } from '@angular/router';
+
+import {
+        TranslateService
+    } from 'ng2-translate/ng2-translate';
+
+import {
+        SessionsService
+    } from './sessions/sessions.service';
 
 @Component({
     selector    : 'dashboard',
     templateUrl : 'views/dashboard.html'
 })
-export class DashboardComponent {}
+export class DashboardComponent {
+
+    constructor( private _router : Router, private _session : SessionsService, private _translate : TranslateService ) {}
+
+    public logout( $event ) {
+        $event.preventDefault();
+
+        this._session.terminate( this._session.getToken() )
+            .then( data => {
+                this._router.navigate([ '/login' ]);
+            })
+            .catch( error => {
+                swal( this._translate.instant( 'title.login_error' ), this._translate.instant( 'message.login_error' ), 'error' );
+            });
+    }
+}

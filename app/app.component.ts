@@ -12,9 +12,13 @@ import {
         TranslateService
     } from 'ng2-translate/ng2-translate';
 
+import {
+        SessionsService
+    } from './sessions/sessions.service';
+
 @Component({
     directives  : [ ROUTER_DIRECTIVES ],
-    providers   : [ CookieService ],
+    providers   : [ CookieService, SessionsService ],
     selector    : 'ng-boletas',
     template    : `
         <router-outlet></router-outlet>
