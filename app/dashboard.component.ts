@@ -4,6 +4,6 @@ import {
 
 @Component({
     selector    : 'dashboard',
-    template    : '<h1>Dashboard</h1>'
+    templateUrl : 'views/dashboard.html'
 })
 export class DashboardComponent {}

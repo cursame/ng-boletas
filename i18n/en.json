@@ -4,6 +4,8 @@
     "label.email"           : "Email",
     "label.pass"            : "Password",
 
+    "menu.logout"           : "Logout",
+
     "message.login_error"   : "Verify your user credentials!",
 
     "title.login"           : "Login",
