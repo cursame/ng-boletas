@@ -9,3 +9,4 @@ bower_components/
 css/style.css
 css/vendor.css
 vendor
+app/config.ts
