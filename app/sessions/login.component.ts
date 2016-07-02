@@ -16,6 +16,8 @@ import {
         SessionsService
     } from './sessions.service';
 
+declare var swal : any;
+
 @Component({
     selector    : 'user-login',
     templateUrl : 'views/sessions/login.html'

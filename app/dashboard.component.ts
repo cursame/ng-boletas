@@ -13,6 +13,8 @@ import {
         SessionsService
     } from './sessions/sessions.service';
 
+declare var swal : any;
+
 @Component({
     selector    : 'dashboard',
     templateUrl : 'views/dashboard.html'
