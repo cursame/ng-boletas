@@ -1,6 +1,9 @@
 import {
         Component
     } from '@angular/core';
+import {
+        Router
+    } from '@angular/router';
 
 import {
     TranslateService
@@ -24,12 +27,12 @@ export class LoginComponent {
 
     credentials : Credentials   = new Credentials();
 
-    constructor( private sessions : SessionsService, private translate : TranslateService ) {}
+    constructor( private router : Router, private sessions : SessionsService, private translate : TranslateService ) {}
 
     login() {
         this.sessions.start( this.credentials )
             .then( data => {
-                
+                this.router.navigate([ '/dashboard' ]);
             })
             .catch( error => {
                 swal( this.translate.instant( 'title.login_error' ), this.translate.instant( 'message.login_error' ), 'error' );
