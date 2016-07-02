@@ -1,8 +1,11 @@
 {
-    "btn.login"     : "Login",
+    "btn.login"             : "Login",
 
-    "label.email"   : "Email",
-    "label.pass"    : "Password",
+    "label.email"           : "Email",
+    "label.pass"            : "Password",
 
-    "title.login"   : "Login"
+    "message.login_error"   : "Verify your user credentials!",
+
+    "title.login"           : "Login",
+    "title.login_error"     : "Invalid credentials"
 }

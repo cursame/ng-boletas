@@ -3,6 +3,10 @@ import {
     } from '@angular/core';
 
 import {
+    TranslateService
+    } from 'ng2-translate/ng2-translate';
+
+import {
         Credentials
     } from './credentials';
 import {
@@ -18,17 +22,17 @@ import {
 })
 export class LoginComponent {
 
-    credentials = new Credentials();
+    credentials : Credentials   = new Credentials();
 
-    constructor( private sessions : SessionsService ) {}
+    constructor( private sessions : SessionsService, private translate : TranslateService ) {}
 
     login() {
         this.sessions.start( this.credentials )
             .then( data => {
-                console.log( data );
+                
             })
             .catch( error => {
-                console.log( error );
+                swal( this.translate.instant( 'title.login_error' ), this.translate.instant( 'message.login_error' ), 'error' );
             });
     }
 }
