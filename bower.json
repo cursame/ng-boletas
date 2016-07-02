@@ -1,9 +1,10 @@
 {
-    "name"          : "ngBoletas",
+    "name"          : "ng_boletas",
     "description"   : "Angular 2 web client for the cursame boletas service.",
     "dependencies"  : {
         "bootstrap"             : "3.3.6",
-        "blueimp-file-upload"   : "9.12.1"
+        "blueimp-file-upload"   : "9.12.1",
+        "sweetalert"            : "1.1.3"
     },
     "homepage"      : "https://github.com/cursame/ng-boletas",
     "overrides"     : {
