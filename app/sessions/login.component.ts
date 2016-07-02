@@ -10,11 +10,9 @@ import {
     } from 'ng2-translate/ng2-translate';
 
 import {
-        Credentials
-    } from './credentials';
-import {
+        Credentials,
         SessionsService
-    } from './sessions.service';
+    } from './sessions.module';
 
 declare var swal : any;
 

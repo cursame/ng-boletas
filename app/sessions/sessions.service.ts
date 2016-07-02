@@ -16,11 +16,9 @@ import {
         config
     } from '../config';
 import {
-        Credentials
-    } from './credentials';
-import {
+        Credentials,
         Session
-    } from './session';
+    } from './sessions.module';
 
 @Injectable()
 export class SessionsService {

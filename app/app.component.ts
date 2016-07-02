@@ -14,7 +14,7 @@ import {
 
 import {
         SessionsService
-    } from './sessions/sessions.service';
+    } from './sessions/sessions.module';
 
 @Component({
     directives  : [ ROUTER_DIRECTIVES ],

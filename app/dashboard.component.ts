@@ -11,7 +11,7 @@ import {
 
 import {
         SessionsService
-    } from './sessions/sessions.service';
+    } from './sessions/sessions.module';
 
 declare var swal : any;
 
