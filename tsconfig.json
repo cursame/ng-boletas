@@ -8,8 +8,5 @@
         "experimentalDecorators"    : true,
         "removeComments"            : false,
         "noImplicitAny"             : false
-    },
-    "exclude"           : [
-        "app/config.example.ts"
-    ]
+    }
 }
