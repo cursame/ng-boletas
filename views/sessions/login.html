@@ -6,20 +6,20 @@
                     <a ui-sref="login"><img src="img/logo.png"></a>
                 </div>
                 <div>
-                    <form>
+                    <form (ngSubmit)="login()">
                         <h4>{{ 'title.login' | translate }}</h4>
                         <div class="form-group">
                             <label for="email" class="sr-only">{{ 'label.email' | translate }}</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
-                                <input type="email" name="email" class="form-control" id="user-email" placeholder="{{ 'label.email' | translate }}">
+                                <input type="email" name="email" class="form-control" id="user-email" placeholder="{{ 'label.email' | translate }}" [(ngModel)]="credentials.email" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="password" class="sr-only">{{ 'label.pass' | translate }}</label>
                             <div class="input-group">
                                 <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-                                <input type="password" name="password" class="form-control" id="user-password" placeholder="{{ 'label.pass' | translate }}">
+                                <input type="password" name="password" class="form-control" id="user-password" placeholder="{{ 'label.pass' | translate }}" [(ngModel)]="credentials.pass" required>
                             </div>
                         </div>
                         <div class="row">
