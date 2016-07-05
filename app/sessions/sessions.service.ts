@@ -34,6 +34,10 @@ export class SessionsService {
         return session ? session.token : null;
     }
 
+    public isLoggedIn() {
+        return <Session>this.cookie.getObject( 'session' ) ? true : false;
+    }
+
     public start( credentials : Credentials ) {
         let headers     = new Headers({
                 'Content-Type'  : 'application/json'

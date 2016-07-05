@@ -34,4 +34,10 @@ export class DashboardComponent {
                 swal( this._translate.instant( 'title.login_error' ), this._translate.instant( 'message.login_error' ), 'error' );
             });
     }
+
+    public ngOnInit() {
+        if ( !this._session.isLoggedIn() ) {
+            this._router.navigate([ '/login' ]);
+        }
+    }
 }
