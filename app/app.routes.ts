@@ -13,11 +13,6 @@ import {
 const routes : RouterConfig = [
     {
         path        : '',
-        redirectTo  : '/login',
-        terminal    : true
-    },
-    {
-        path        : 'dashboard',
         component   : DashboardComponent
     },
     {
