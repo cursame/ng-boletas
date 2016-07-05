@@ -26,3 +26,18 @@
         </div>
     </div>
 </nav>
+<div class="container-fluid full-height">
+    <div class="row full-height">
+        <div id="main-menu" class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+            <ul>
+                <li><a>{{ 'menu.analytics' | translate }}</a></li>
+                <li><a>{{ 'menu.scores' | translate }}</a></li>
+                <li><a>{{ 'menu.users' | translate }}</a></li>
+                <li><a>{{ 'menu.courses' | translate }}</a></li>
+            </ul>
+        </div>
+        <div id="main-container" class="col-lg-10 col-md-10 col-sm-8 col-xs-8 full-height">
+            <div class="inner full-height" ui-view="main-container"></div>
+        </div>
+    </div>
+</div>

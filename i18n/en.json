@@ -4,7 +4,11 @@
     "label.email"           : "Email",
     "label.pass"            : "Password",
 
+    "menu.analytics"        : "Analytics",
+    "menu.courses"          : "Courses",
     "menu.logout"           : "Logout",
+    "menu.scores"           : "Scores",
+    "menu.users"            : "Users",
 
     "message.login_error"   : "Verify your user credentials!",
 
