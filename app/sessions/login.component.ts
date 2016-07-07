@@ -3,7 +3,7 @@ import {
     } from '@angular/core';
 import {
         Router
-    } from '@angular/router-deprecated';
+    } from '@angular/router';
 
 import {
         TranslateService
@@ -29,7 +29,7 @@ export class LoginComponent {
     public login() {
         this._session.start( this.credentials )
             .then( data => {
-                this._router.navigate([ 'Dashboard' ]);
+                this._router.navigate([ '/dashboard' ]);
             })
             .catch( error => {
                 swal( this._translate.instant( 'title.login_error' ), this._translate.instant( 'message.login_error' ), 'error' );

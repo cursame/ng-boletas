@@ -3,7 +3,7 @@ import {
     } from '@angular/core';
 import {
         Router,
-    } from '@angular/router-deprecated';
+    } from '@angular/router';
 
 import {
         TranslateService
@@ -12,6 +12,9 @@ import {
 import {
         SessionsService
     } from './sessions/sessions.module';
+import {
+        UsersComponent
+    } from './users/users.module';
 
 declare var swal : any;
 
@@ -28,7 +31,7 @@ export class DashboardComponent {
 
         this._session.terminate( this._session.getToken() )
             .then( data => {
-                this._router.navigate([ 'Login' ]);
+                this._router.navigate([ '/login' ]);
             })
             .catch( error => {
                 swal( this._translate.instant( 'title.login_error' ), this._translate.instant( 'message.login_error' ), 'error' );
@@ -37,7 +40,7 @@ export class DashboardComponent {
 
     public ngOnInit() {
         if ( !this._session.isLoggedIn() ) {
-            this._router.navigate([ 'Login' ]);
+            this._router.navigate([ '/login' ]);
         }
     }
 }
