@@ -2,8 +2,8 @@ import {
         Component
     } from '@angular/core';
 import {
-        Router
-    } from '@angular/router';
+        Router,
+    } from '@angular/router-deprecated';
 
 import {
         TranslateService
@@ -28,7 +28,7 @@ export class DashboardComponent {
 
         this._session.terminate( this._session.getToken() )
             .then( data => {
-                this._router.navigate([ '/login' ]);
+                this._router.navigate([ 'Login' ]);
             })
             .catch( error => {
                 swal( this._translate.instant( 'title.login_error' ), this._translate.instant( 'message.login_error' ), 'error' );
@@ -37,7 +37,7 @@ export class DashboardComponent {
 
     public ngOnInit() {
         if ( !this._session.isLoggedIn() ) {
-            this._router.navigate([ '/login' ]);
+            this._router.navigate([ 'Login' ]);
         }
     }
 }

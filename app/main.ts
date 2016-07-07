@@ -8,6 +8,9 @@ import {
         disableDeprecatedForms,
         provideForms
     } from '@angular/forms';
+import {
+        ROUTER_PROVIDERS
+    } from '@angular/router-deprecated';
 
 import {
         bootstrap
@@ -21,16 +24,13 @@ import {
 import {
         AppComponent
     } from './app.component';
-import {
-        APP_ROUTER_PROVIDER
-    } from './app.routes';
 
 bootstrap( AppComponent, [
         disableDeprecatedForms(),
         provideForms(),
         HTTP_PROVIDERS,
+        ROUTER_PROVIDERS,
         TRANSLATE_PROVIDERS,
-        APP_ROUTER_PROVIDER,
         {
             provide     : PLATFORM_PIPES,
             useValue    : [ TranslatePipe ],
