@@ -29,7 +29,7 @@ export class LoginComponent {
     public login() {
         this._session.start( this.credentials )
             .then( data => {
-                this._router.navigate([ '/dashboard' ]);
+                this._router.navigate([ '/' ]);
             })
             .catch( error => {
                 swal( this._translate.instant( 'title.login_error' ), this._translate.instant( 'message.login_error' ), 'error' );

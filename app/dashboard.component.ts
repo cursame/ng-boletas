@@ -3,6 +3,7 @@ import {
     } from '@angular/core';
 import {
         Router,
+        ROUTER_DIRECTIVES
     } from '@angular/router';
 
 import {
@@ -19,6 +20,7 @@ import {
 declare var swal : any;
 
 @Component({
+    directives  : [ ROUTER_DIRECTIVES ],
     selector    : 'dashboard',
     templateUrl : 'views/dashboard.html'
 })

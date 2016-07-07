@@ -1,5 +1,6 @@
 import {
-        provideRouter
+        provideRouter,
+        RouterConfig
     } from '@angular/router';
 
 import {
@@ -8,20 +9,27 @@ import {
 import {
         LoginComponent
     } from './sessions/sessions.module';
+import {
+        UsersComponent
+    } from './users/users.module';
 
 const routes : RouterConfig = [
     {
-        path        : 'dashboard',
-        component   : DashboardComponent
+        path        : '',
+        component   : DashboardComponent,
+        children    : [
+            {
+                path        : ''
+            },
+            {
+                path        : 'users',
+                component   : UsersComponent
+            }
+        ]
     },
     {
         path        : 'login',
         component   : LoginComponent
-    },
-    {
-        path        : '',
-        redirectTo  : 'dashboard',
-        terminal    : true
     }
 ];
 

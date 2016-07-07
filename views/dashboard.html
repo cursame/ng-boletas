@@ -32,12 +32,14 @@
             <ul>
                 <li><a>{{ 'menu.analytics' | translate }}</a></li>
                 <li><a>{{ 'menu.scores' | translate }}</a></li>
-                <li><a>{{ 'menu.users' | translate }}</a></li>
+                <li routerLinkActive="active"><a [routerLink]="['/users']">{{ 'menu.users' | translate }}</a></li>
                 <li><a>{{ 'menu.courses' | translate }}</a></li>
             </ul>
         </div>
         <div id="main-container" class="col-lg-10 col-md-10 col-sm-8 col-xs-8 full-height">
-            <div class="inner full-height" ui-view="main-container"></div>
+            <div class="inner full-height">
+                <router-outlet></router-outlet>
+            </div>
         </div>
     </div>
 </div>
