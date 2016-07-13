@@ -10,7 +10,7 @@ import {
         LoginComponent
     } from './sessions/sessions.module';
 import {
-        UsersComponent
+        UsersListComponent
     } from './users/users.module';
 
 const routes : RouterConfig = [
@@ -22,8 +22,8 @@ const routes : RouterConfig = [
                 path        : ''
             },
             {
-                path        : 'users',
-                component   : UsersComponent
+                path        : 'users/list',
+                component   : UsersListComponent
             }
         ]
     },

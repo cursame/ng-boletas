@@ -10,4 +10,4 @@ import {
     selector    : 'users',
     templateUrl : 'views/users/list.html'
 })
-export class UsersComponent {}
+export class UsersListComponent {}
