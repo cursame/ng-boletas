@@ -1,13 +1,13 @@
 import {
-        Component
-    } from '@angular/core';
+    Component
+} from '@angular/core';
 import {
-        ROUTER_DIRECTIVES
-    } from '@angular/router';
+    ROUTER_DIRECTIVES
+} from '@angular/router';
 
 @Component({
     directives  : [ ROUTER_DIRECTIVES ],
-    selector    : 'users',
+    selector    : 'users-list',
     templateUrl : 'views/users/list.html'
 })
 export class UsersListComponent {}
