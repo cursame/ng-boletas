@@ -13,9 +13,6 @@ import {
 import {
         SessionsService
     } from './sessions/sessions.module';
-import {
-        UsersComponent
-    } from './users/users.module';
 
 declare var swal : any;
 
