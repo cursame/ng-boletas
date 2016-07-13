@@ -1,4 +1,5 @@
 {
+    "btn.add_user"          : "Add User",
     "btn.login"             : "Login",
 
     "label.email"           : "Email",
@@ -13,5 +14,6 @@
     "message.login_error"   : "Verify your user credentials!",
 
     "title.login"           : "Login",
-    "title.login_error"     : "Invalid credentials"
+    "title.login_error"     : "Invalid credentials",
+    "title.users"           : "Users"
 }

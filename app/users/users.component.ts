@@ -8,6 +8,6 @@ import {
 @Component({
     directives  : [ ROUTER_DIRECTIVES ],
     selector    : 'users',
-    template    : '<h1>Users</h1>'
+    templateUrl : 'views/users/list.html'
 })
 export class UsersComponent {}
