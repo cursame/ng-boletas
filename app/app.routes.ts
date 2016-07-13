@@ -10,6 +10,7 @@ import {
         LoginComponent
     } from './sessions/sessions.module';
 import {
+        UsersCreateComponent,
         UsersListComponent
     } from './users/users.module';
 
@@ -24,6 +25,10 @@ const routes : RouterConfig = [
             {
                 path        : 'users/list',
                 component   : UsersListComponent
+            },
+            {
+                path        : 'users/create',
+                component   : UsersCreateComponent
             }
         ]
     },

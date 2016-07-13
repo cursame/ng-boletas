@@ -1,5 +1,6 @@
 {
     "btn.add_user"          : "Add User",
+    "btn.back"              : "Back",
     "btn.login"             : "Login",
 
     "label.email"           : "Email",
@@ -15,5 +16,6 @@
 
     "title.login"           : "Login",
     "title.login_error"     : "Invalid credentials",
-    "title.users"           : "Users"
+    "title.users"           : "Users",
+    "title.users_create"    : "Create User"
 }
