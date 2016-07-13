@@ -22,6 +22,7 @@
                 <label for="school">{{ 'label.school' | translate }}</label>
                 <select name="school" class="form-control" [(ngModel)]="user.school">
                     <option value="">{{ 'option.select_school' | translate }}</option>
+                    <option *ngFor="let school of schools" value="{{ school._id }}">{{ school.name }}</option>
                 </select>
             </div>
             <div class="form-group">
