@@ -39,5 +39,5 @@ const routes : RouterConfig = [
 ];
 
 export const APP_ROUTES     = [
-    provideRouter( routes, { enableTracing : true })
+    provideRouter( routes, { enableTracing : false })
 ];
