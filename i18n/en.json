@@ -1,21 +1,33 @@
 {
-    "btn.add_user"          : "Add User",
-    "btn.back"              : "Back",
-    "btn.login"             : "Login",
+    "btn.add_user"                  : "Add User",
+    "btn.back"                      : "Back",
+    "btn.create_user"               : "Create User",
+    "btn.login"                     : "Login",
 
-    "label.email"           : "Email",
-    "label.pass"            : "Password",
+    "label.email"                   : "Email",
+    "label.name"                    : "Name",
+    "label.pass"                    : "Password",
+    "label.school"                  : "School",
+    "label.type"                    : "Type",
 
-    "menu.analytics"        : "Analytics",
-    "menu.courses"          : "Courses",
-    "menu.logout"           : "Logout",
-    "menu.scores"           : "Scores",
-    "menu.users"            : "Users",
+    "menu.analytics"                : "Analytics",
+    "menu.courses"                  : "Courses",
+    "menu.logout"                   : "Logout",
+    "menu.scores"                   : "Scores",
+    "menu.users"                    : "Users",
 
-    "message.login_error"   : "Verify your user credentials!",
+    "message.login_error"           : "Verify your user credentials!",
 
-    "title.login"           : "Login",
-    "title.login_error"     : "Invalid credentials",
-    "title.users"           : "Users",
-    "title.users_create"    : "Create User"
+    "option.admin"                  : "Administrator",
+    "option.coordinator"            : "Coordinator",
+    "option.student"                : "Student",
+    "option.teacher"                : "Teacher",
+    "option.select_school"          : "Select school...",
+    "option.select_type"            : "Select type...",
+    "option.super"                  : "Super administrator",
+
+    "title.login"                   : "Login",
+    "title.login_error"             : "Invalid credentials",
+    "title.users"                   : "Users",
+    "title.users_create"            : "Create User"
 }
