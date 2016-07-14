@@ -34,7 +34,12 @@ export class UsersCreateComponent {
     schools : School[]  = [];
 
     constructor( private _router : Router, private _schoolsService : SchoolsService, private _users : UsersService, private _translate : TranslateService ) {
-        this._schoolsService.query()
+        let query   = {
+            page        : 1,
+            per_page    : 9999
+        };
+
+        this._schoolsService.query( query )
             .then( schools => this.schools = schools );
     }
 
