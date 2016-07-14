@@ -10,6 +10,7 @@ import {
         LoginComponent
     } from './sessions/sessions.module';
 import {
+        SchoolsCreateComponent,
         SchoolsListComponent
     } from './schools/schools.module';
 import {
@@ -28,6 +29,10 @@ const routes : RouterConfig = [
             {
                 path        : 'schools/list',
                 component   : SchoolsListComponent
+            },
+            {
+                path        : 'schools/create',
+                component   : SchoolsCreateComponent
             },
             {
                 path        : 'users/list',

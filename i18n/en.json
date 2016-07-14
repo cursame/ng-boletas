@@ -2,6 +2,7 @@
     "btn.add_school"                : "Add School",
     "btn.add_user"                  : "Add User",
     "btn.back"                      : "Back",
+    "btn.create_school"             : "Create School",
     "btn.create_user"               : "Create User",
     "btn.login"                     : "Login",
 
@@ -14,8 +15,10 @@
 
     "label.email"                   : "Email",
     "label.name"                    : "Name",
+    "label.open_features"           : "Open features",
     "label.pass"                    : "Password",
     "label.school"                  : "School",
+    "label.settings"                : "Settings",
     "label.type"                    : "Type",
 
     "menu.analytics"                : "Analytics",
@@ -42,6 +45,7 @@
     "title.login"                   : "Login",
     "title.login_error"             : "Invalid credentials",
     "title.schools"                 : "Schools",
+    "title.schools_create"          : "Create School",
     "title.users_creation"          : "Users Creation",
     "title.users"                   : "Users",
     "title.users_create"            : "Create User"
