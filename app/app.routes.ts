@@ -10,6 +10,9 @@ import {
         LoginComponent
     } from './sessions/sessions.module';
 import {
+        SchoolsListComponent
+    } from './schools/schools.module';
+import {
         UsersCreateComponent,
         UsersListComponent
     } from './users/users.module';
@@ -21,6 +24,10 @@ const routes : RouterConfig = [
         children    : [
             {
                 path        : ''
+            },
+            {
+                path        : 'schools/list',
+                component   : SchoolsListComponent
             },
             {
                 path        : 'users/list',
