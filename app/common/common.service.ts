@@ -34,6 +34,20 @@ export class CommonService {
         this._session   = this._sessionService.getToken();
     }
 
+    public create( data : any ) {
+        data.session    = this._session;
+
+        return this._http.post( this.url, JSON.stringify( data ), {
+                headers : new Headers({
+                    'Content-Type'  : 'application/json'
+                })
+            }).toPromise()
+            .then( res => {
+                return res.json();
+            })
+            .catch( this.handleError );
+    }
+
     public query() {
          let params: URLSearchParams    = new URLSearchParams();
          params.set( 'session', this._session );
