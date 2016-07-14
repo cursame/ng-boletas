@@ -48,9 +48,13 @@ export class CommonService {
             .catch( this.handleError );
     }
 
-    public query() {
+    public query( q : any ) {
          let params: URLSearchParams    = new URLSearchParams();
          params.set( 'session', this._session );
+
+         for ( let key in q ) {
+            params.set( key, q[key] );
+         }
 
         return this._http.get( this.url, {
                 search  : params,
