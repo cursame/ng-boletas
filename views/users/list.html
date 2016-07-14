@@ -2,3 +2,45 @@
     <h1>{{ 'title.users' | translate }}</h1>
     <a class="btn btn-success" [routerLink]="['/users/create']">{{ 'btn.add_user' | translate }}</a>
 </div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>{{ 'header.name' | translate }}</th>
+                    <th width="20%">{{ 'header.email' | translate }}</th>
+                    <th width="15%">{{ 'header.school' | translate }}</th>
+                    <th width="15%">{{ 'header.type' | translate }}</th>
+                    <th width="15%">{{ 'header.creation_date' | translate }}</th>
+                    <th width="15%">{{ 'header.action' | translate }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.school.name }}</td>
+                    <td>
+                        <span [ngSwitch]="user.type">
+                            <span *ngSwitchCase="0">{{ 'option.super' | translate }}</span>
+                            <span *ngSwitchCase="1">{{ 'option.coordinator' | translate }}</span>
+                            <span *ngSwitchCase="2">{{ 'option.admin' | translate }}</span>
+                            <span *ngSwitchCase="3">{{ 'option.teacher' | translate }}</span>
+                            <span *ngSwitchCase="4">{{ 'option.student' | translate }}</span>
+                        </span>
+                    </td>
+                    <td>{{ user.creation_date | date:'dd-MM-y' }}</td>
+                    <td>
+                        <span class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i></button>
+                            <ul class="dropdown-menu">
+                                <li><a>{{ 'menu.details' | translate }}</a></li>
+                                <li><a>{{ 'menu.remove' | translate }}</a></li>
+                            </ul>
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

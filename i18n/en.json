@@ -4,6 +4,13 @@
     "btn.create_user"               : "Create User",
     "btn.login"                     : "Login",
 
+    "header.action"                 : "Action",
+    "header.creation_date"          : "Creation Date",
+    "header.email"                  : "Email",
+    "header.name"                   : "Name",
+    "header.school"                 : "School",
+    "header.type"                   : "Type",
+
     "label.email"                   : "Email",
     "label.name"                    : "Name",
     "label.pass"                    : "Password",
@@ -12,7 +19,9 @@
 
     "menu.analytics"                : "Analytics",
     "menu.courses"                  : "Courses",
+    "menu.details"                  : "Details",
     "menu.logout"                   : "Logout",
+    "menu.remove"                   : "Remove",
     "menu.scores"                   : "Scores",
     "menu.users"                    : "Users",
 
