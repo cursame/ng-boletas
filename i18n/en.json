@@ -17,6 +17,8 @@
     "menu.users"                    : "Users",
 
     "message.login_error"           : "Verify your user credentials!",
+    "message.user_create_error"     : "Verify the entered user information!",
+    "message.user_created"          : "The user has been created successfully!",
 
     "option.admin"                  : "Administrator",
     "option.coordinator"            : "Coordinator",
@@ -28,6 +30,7 @@
 
     "title.login"                   : "Login",
     "title.login_error"             : "Invalid credentials",
+    "title.users_creation"          : "Users Creation",
     "title.users"                   : "Users",
     "title.users_create"            : "Create User"
 }
