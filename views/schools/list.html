@@ -13,7 +13,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let school of schools">
+                <tr *ngFor="let school of schools, let i = index">
                     <td>{{ school.name }}</td>
                     <td>{{ school.creation_date | date:'dd-MM-y' }}</td>
                     <td>
@@ -21,7 +21,7 @@
                             <button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i></button>
                             <ul class="dropdown-menu">
                                 <li><a>{{ 'menu.details' | translate }}</a></li>
-                                <li><a>{{ 'menu.remove' | translate }}</a></li>
+                                <li><span (click)="remove( school._id, i )">{{ 'menu.remove' | translate }}</span></li>
                             </ul>
                         </span>
                     </td>

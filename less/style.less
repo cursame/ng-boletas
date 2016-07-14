@@ -31,7 +31,9 @@ a, a:active, a:focus, a:visited { outline: none; text-decoration: none; }
 .table > tbody > tr > td > .dropdown > .dropdown-toggle     { background-color: transparent; border: none; }
 .table > tbody > tr > td .dropdown-menu                     { background-color: #fff; border: 1px solid rgba(0,0,0,0.15); top: 150%; left: -150%; }
 .table > tbody > tr > td .dropdown-menu > li                { border-bottom: 1px solid rgba(0,0,0,0.15); }
-.table > tbody > tr > td .dropdown-menu > li > a            { font-size: 12px; line-height: 2.5em; }
+.table > tbody > tr > td .dropdown-menu > li > a,
+.table > tbody > tr > td .dropdown-menu > li > span         { display: block; padding: 3px 20px; font-size: 12px; line-height: 2.5em; cursor: pointer; }
+.table > tbody > tr > td .dropdown-menu > li > span:hover   { background-color: #f5f5f5; color: #262626; }
 .table > tbody > tr > td .dropdown-menu > li:last-child     { border: none; }
 .table > tbody > tr > td .dropdown-menu:after,
 .table > tbody > tr > td .dropdown-menu:before              { bottom: 100%; left: 48%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; }
