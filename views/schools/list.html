@@ -1,0 +1,32 @@
+<div class="section-header">
+    <h1>{{ 'title.schools' | translate }}</h1>
+    <a class="btn btn-success" [routerLink]="['/schools/create']">{{ 'btn.add_school' | translate }}</a>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>{{ 'header.name' | translate }}</th>
+                    <th width="25%">{{ 'header.creation_date' | translate }}</th>
+                    <th width="25%">{{ 'header.action' | translate }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let school of schools">
+                    <td>{{ school.name }}</td>
+                    <td>{{ school.creation_date | date:'dd-MM-y' }}</td>
+                    <td>
+                        <span class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i></button>
+                            <ul class="dropdown-menu">
+                                <li><a>{{ 'menu.details' | translate }}</a></li>
+                                <li><a>{{ 'menu.remove' | translate }}</a></li>
+                            </ul>
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
