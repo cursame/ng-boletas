@@ -41,7 +41,8 @@ export class CommonService {
                 headers : new Headers({
                     'Content-Type'  : 'application/json'
                 })
-            }).toPromise()
+            })
+            .toPromise()
             .then( res => {
                 return res.json();
             })
@@ -61,12 +62,28 @@ export class CommonService {
                 headers : new Headers({
                     'Content-Type'  : 'application/json'
                 })
-            }).toPromise()
+            })
+            .toPromise()
             .then( res => {
                 let response    = res.json();
 
                 return response.results;
             })
+            .catch( this.handleError );
+    }
+
+    public remove( id : string ) {
+        let params : any    = {
+            session     : this._session
+        };
+
+        return this._http.delete( this.url + '/' + id, {
+                body    : params,
+                headers : new Headers({
+                    'Content-Type'  : 'application/json'
+                })
+            })
+            .toPromise()
             .catch( this.handleError );
     }
 
