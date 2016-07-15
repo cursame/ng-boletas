@@ -10,6 +10,9 @@ import {
     DashboardComponent
 } from './dashboard.component';
 import {
+    GroupsListComponent
+} from './groups/groups.module';
+import {
     LoginComponent
 } from './sessions/sessions.module';
 import {
@@ -32,6 +35,10 @@ const routes : RouterConfig = [
             {
                 path        : 'courses/list',
                 component   : CoursesListComponent
+            },
+            {
+                path        : 'groups/list',
+                component   : GroupsListComponent
             },
             {
                 path        : 'schools/list',
