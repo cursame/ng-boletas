@@ -1,0 +1,21 @@
+<div class="section-header">
+    <h1>{{ 'title.groups' | translate }}</h1>
+    <a class="btn btn-success" [routerLink]="['/groups/create']">{{ 'btn.add_group' | translate }}</a>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>{{ 'header.name' | translate }}</th>
+                    <th width="25%">{{ 'header.administrator' | translate }}</th>
+                    <th width="25%">{{ 'header.school' | translate }}</th>
+                    <th width="15%">{{ 'header.action' | translate }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let group of groups"></tr>
+            </tbody>
+        </table>
+    </div>
+</div>

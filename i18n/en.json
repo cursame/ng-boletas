@@ -1,5 +1,6 @@
 {
     "btn.add_course"                : "Add Course",
+    "btn.add_group"                 : "Add Group",
     "btn.add_school"                : "Add School",
     "btn.add_user"                  : "Add User",
     "btn.back"                      : "Back",
@@ -8,6 +9,7 @@
     "btn.login"                     : "Login",
 
     "header.action"                 : "Action",
+    "header.administrator"          : "Administrator",
     "header.creation_date"          : "Creation Date",
     "header.email"                  : "Email",
     "header.group"                  : "Group",
@@ -27,6 +29,7 @@
     "menu.analytics"                : "Analytics",
     "menu.courses"                  : "Courses",
     "menu.details"                  : "Details",
+    "menu.groups"                   : "Groups",
     "menu.logout"                   : "Logout",
     "menu.remove"                   : "Remove",
     "menu.schools"                  : "Schools",
@@ -52,6 +55,7 @@
     "option.super"                  : "Super administrator",
 
     "title.courses"                 : "Courses",
+    "title.groups"                  : "Groups",
     "title.login"                   : "Login",
     "title.login_error"             : "Invalid credentials",
     "title.schools"                 : "Schools",
