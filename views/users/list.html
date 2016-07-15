@@ -16,8 +16,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let user of users">
-                    <td>{{ user.name }}</td>
+                <tr *ngFor="let user of users, let i = index">
+                    <td class="">{{ user.name }}</td>
                     <td>{{ user.email }}</td>
                     <td>{{ user.school.name }}</td>
                     <td>
@@ -35,7 +35,7 @@
                             <button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i></button>
                             <ul class="dropdown-menu">
                                 <li><a>{{ 'menu.details' | translate }}</a></li>
-                                <li><a>{{ 'menu.remove' | translate }}</a></li>
+                                <li><span (click)="remove( user._id, i )">{{ 'menu.remove' | translate }}</span></li>
                             </ul>
                         </span>
                     </td>

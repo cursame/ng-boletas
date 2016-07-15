@@ -37,6 +37,8 @@
     "message.school_removed"        : "The school has been removed from the system!",
     "message.user_create_error"     : "Verify the entered user information!",
     "message.user_created"          : "The user has been created successfully!",
+    "message.user_remove_error"     : "Something went wrong removing the user record!",
+    "message.user_removed"          : "The user has been removed from the system!",
 
     "option.admin"                  : "Administrator",
     "option.coordinator"            : "Coordinator",
@@ -54,5 +56,6 @@
     "title.schools_removal"         : "School Removal",
     "title.users"                   : "Users",
     "title.users_create"            : "Create User",
-    "title.users_creation"          : "Users Creation"
+    "title.users_creation"          : "Users Creation",
+    "title.users_removal"           : "User Removal"
 }
