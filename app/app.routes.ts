@@ -10,7 +10,8 @@ import {
     DashboardComponent
 } from './dashboard.component';
 import {
-    GroupsListComponent
+    GroupsListComponent,
+    GroupsCreateComponent
 } from './groups/groups.module';
 import {
     LoginComponent
@@ -39,6 +40,10 @@ const routes : RouterConfig = [
             {
                 path        : 'groups/list',
                 component   : GroupsListComponent
+            },
+            {
+                path        : 'groups/create',
+                component   : GroupsCreateComponent
             },
             {
                 path        : 'schools/list',
