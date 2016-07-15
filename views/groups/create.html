@@ -1,0 +1,27 @@
+<div class="section-header">
+    <h1>{{ 'title.groups_create' | translate }}</h1>
+    <a class="btn btn-info" [routerLink]="['/groups/list']">{{ 'btn.back' | translate }}</a>
+    <a class="btn btn-success" (click)="create()">{{ 'btn.create_group' | translate }}</a>
+</div>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <form class="form" (ngSubmit)="create()">
+            <div class="form-group">
+                <label for="name">{{ 'label.name' | translate }}</label>
+                <input type="text" name="name" class="form-control" placeholder="Second A" [(ngModel)]="group.name">
+            </div>
+            <div class="form-group">
+                <label for="school">{{ 'label.school' | translate }}</label>
+                <select name="school" class="form-control" [(ngModel)]="group.school">
+                    <option value="">{{ 'option.select_school' | translate }}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="administrator">{{ 'label.administrator' | translate }}</label>
+                <select name="administrator" class="form-control" [(ngModel)]="group.administrator">
+                    <option value="">{{ 'option.select_administrator' | translate }}</option>
+                </select>
+            </div>
+        </form>
+    </div>
+</div>
