@@ -14,7 +14,20 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let group of groups"></tr>
+                <tr *ngFor="let group of groups, let i = index">
+                    <td class="">{{ group.name }}</td>
+                    <td>{{ group.administrator.name }}</td>
+                    <td>{{ group.school.name }}</td>
+                    <td>
+                        <span class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i></button>
+                            <ul class="dropdown-menu">
+                                <li><a>{{ 'menu.details' | translate }}</a></li>
+                                <li><span (click)="remove( group._id, i )">{{ 'menu.remove' | translate }}</span></li>
+                            </ul>
+                        </span>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
