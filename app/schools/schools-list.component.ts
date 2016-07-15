@@ -37,7 +37,6 @@ export class SchoolsListComponent {
     }
 
     public remove( id : string, index : number ) {
-        console.log( index );
         this._service.remove( id )
             .then( school => {
                 this.schools.splice( index, 1 );
