@@ -1,0 +1,39 @@
+<div class="section-header">
+    <h1>{{ 'title.courses_create' | translate }}</h1>
+    <a class="btn btn-info" [routerLink]="['/courses/list']">{{ 'btn.back' | translate }}</a>
+    <a class="btn btn-success" (click)="create()">{{ 'btn.create_course' | translate }}</a>
+</div>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <form class="form" (ngSubmit)="create()">
+            <div class="form-group">
+                <label for="name">{{ 'label.name' | translate }}</label>
+                <input type="text" name="name" class="form-control" placeholder="Mathematics I" [(ngModel)]="course.name">
+            </div>
+            <div class="form-group">
+                <label for="school">{{ 'label.school' | translate }}</label>
+                <select name="school" class="form-control" [(ngModel)]="course.school">
+                    <option value="">{{ 'option.select_school' | translate }}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="group">{{ 'label.group' | translate }}</label>
+                <select name="group" class="form-control" [(ngModel)]="course.group">
+                    <option value="">{{ 'option.select_group' | translate }}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="students">{{ 'label.students' | translate }}</label>
+                <select name="students" class="form-control" [(ngModel)]="course.students">
+                    <option value="">{{ 'option.select_teacher' | translate }}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="teacher">{{ 'label.teacher' | translate }}</label>
+                <select name="teacher" class="form-control" [(ngModel)]="course.teacher">
+                    <option value="">{{ 'option.select_teacher' | translate }}</option>
+                </select>
+            </div>
+        </form>
+    </div>
+</div>
