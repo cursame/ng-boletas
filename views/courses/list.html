@@ -1,0 +1,22 @@
+<div class="section-header">
+    <h1>{{ 'title.courses' | translate }}</h1>
+    <a class="btn btn-success" [routerLink]="['/courses/create']">{{ 'btn.add_course' | translate }}</a>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>{{ 'header.name' | translate }}</th>
+                    <th width="20%">{{ 'header.group' | translate }}</th>
+                    <th width="15%">{{ 'header.teacher' | translate }}</th>
+                    <th width="15%">{{ 'header.school' | translate }}</th>
+                    <th width="15%">{{ 'header.action' | translate }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let course of courses"></tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 {
+    "btn.add_course"                : "Add Course",
     "btn.add_school"                : "Add School",
     "btn.add_user"                  : "Add User",
     "btn.back"                      : "Back",
@@ -9,8 +10,10 @@
     "header.action"                 : "Action",
     "header.creation_date"          : "Creation Date",
     "header.email"                  : "Email",
+    "header.group"                  : "Group",
     "header.name"                   : "Name",
     "header.school"                 : "School",
+    "header.teacher"                : "Teacher",
     "header.type"                   : "Type",
 
     "label.email"                   : "Email",
@@ -48,6 +51,7 @@
     "option.select_type"            : "Select type...",
     "option.super"                  : "Super administrator",
 
+    "title.courses"                 : "Courses",
     "title.login"                   : "Login",
     "title.login_error"             : "Invalid credentials",
     "title.schools"                 : "Schools",
