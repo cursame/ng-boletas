@@ -1,22 +1,25 @@
 import {
-        provideRouter,
-        RouterConfig
-    } from '@angular/router';
+    provideRouter,
+    RouterConfig
+} from '@angular/router';
 
 import {
-        DashboardComponent
-    } from './dashboard.component';
+    CoursesListComponent
+} from './courses/courses.module';
 import {
-        LoginComponent
-    } from './sessions/sessions.module';
+    DashboardComponent
+} from './dashboard.component';
 import {
-        SchoolsCreateComponent,
-        SchoolsListComponent
-    } from './schools/schools.module';
+    LoginComponent
+} from './sessions/sessions.module';
 import {
-        UsersCreateComponent,
-        UsersListComponent
-    } from './users/users.module';
+    SchoolsCreateComponent,
+    SchoolsListComponent
+} from './schools/schools.module';
+import {
+    UsersCreateComponent,
+    UsersListComponent
+} from './users/users.module';
 
 const routes : RouterConfig = [
     {
@@ -25,6 +28,10 @@ const routes : RouterConfig = [
         children    : [
             {
                 path        : ''
+            },
+            {
+                path        : 'courses/list',
+                component   : CoursesListComponent
             },
             {
                 path        : 'schools/list',
