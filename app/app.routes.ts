@@ -4,6 +4,7 @@ import {
 } from '@angular/router';
 
 import {
+    CoursesCreateComponent,
     CoursesListComponent
 } from './courses/courses.module';
 import {
@@ -36,6 +37,10 @@ const routes : RouterConfig = [
             {
                 path        : 'courses/list',
                 component   : CoursesListComponent
+            },
+            {
+                path        : 'courses/create',
+                component   : CoursesCreateComponent
             },
             {
                 path        : 'groups/list',
