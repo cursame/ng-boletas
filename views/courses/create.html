@@ -14,6 +14,7 @@
                 <label for="school">{{ 'label.school' | translate }}</label>
                 <select name="school" class="form-control" [(ngModel)]="course.school">
                     <option value="">{{ 'option.select_school' | translate }}</option>
+                    <option *ngFor="let school of schools" value="{{ school._id }}">{{ school.name }}</option>
                 </select>
             </div>
             <div class="form-group">
@@ -24,8 +25,7 @@
             </div>
             <div class="form-group">
                 <label for="students">{{ 'label.students' | translate }}</label>
-                <select name="students" class="form-control" [(ngModel)]="course.students">
-                    <option value="">{{ 'option.select_teacher' | translate }}</option>
+                <select name="students" class="form-control" [(ngModel)]="course.students" multiple>
                 </select>
             </div>
             <div class="form-group">
