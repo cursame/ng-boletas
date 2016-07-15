@@ -39,6 +39,8 @@
     "menu.users"                    : "Users",
 
     "message.login_error"           : "Verify your user credentials!",
+    "message.group_create_error"    : "Verify the entered group information!",
+    "message.group_created"         : "The group has been created successfully!",
     "message.school_create_error"   : "Check the school information!",
     "message.school_created"        : "The school has been successfully added to the database!",
     "message.school_remove_error"   : "Something went wrong removing the school record!",
@@ -60,6 +62,7 @@
     "title.courses"                 : "Courses",
     "title.groups"                  : "Groups",
     "title.groups_create"           : "Create Group",
+    "title.groups_creation"         : "Groups Creation",
     "title.login"                   : "Login",
     "title.login_error"             : "Invalid credentials",
     "title.schools"                 : "Schools",
