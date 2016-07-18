@@ -37,6 +37,8 @@ export class CoursesCreateComponent {
 
     students    : User[]    = [];
 
+    teachers    : User[]    = [];
+
     constructor( private _schoolsService : SchoolsService, private _groupsService : GroupsService, private _usersService : UsersService ) {
         let query   = {
             page        : 1,
@@ -63,10 +65,21 @@ export class CoursesCreateComponent {
             type        : 4
         };
 
+        let teachersQuery   = {
+            page        : 1,
+            per_page    : 9999,
+            school      : school,
+            select      : 'name',
+            type        : 3
+        };
+
         this._groupsService.query( groupsQuery )
             .then( groups => this.groups = groups );
 
         this._usersService.query( studentsQuery )
             .then( students => this.students = students );
+
+        this._usersService.query( teachersQuery )
+            .then( teachers => this.teachers = teachers );
     }
 }

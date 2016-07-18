@@ -34,6 +34,7 @@
                 <label for="teacher">{{ 'label.teacher' | translate }}</label>
                 <select name="teacher" class="form-control" [(ngModel)]="course.teacher">
                     <option value="">{{ 'option.select_teacher' | translate }}</option>
+                    <option *ngFor="let teacher of teachers" value="{{ teacher._id }}">{{ teacher.name }}</option>
                 </select>
             </div>
         </form>
