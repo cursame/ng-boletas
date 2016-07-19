@@ -15,7 +15,21 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let course of courses"></tr>
+                <tr *ngFor="let course of courses, let i = index">
+                    <td class="">{{ course.name }}</td>
+                    <td>{{ course.group.name }}</td>
+                    <td>{{ course.teacher.name }}</td>
+                    <td>{{ course.school.name }}</td>
+                    <td>
+                        <span class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i></button>
+                            <ul class="dropdown-menu">
+                                <li><a>{{ 'menu.details' | translate }}</a></li>
+                                <li><span (click)="remove( course._id, i )">{{ 'menu.remove' | translate }}</span></li>
+                            </ul>
+                        </span>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
