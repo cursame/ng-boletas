@@ -18,6 +18,9 @@ import {
     LoginComponent
 } from './sessions/sessions.module';
 import {
+    PeriodsListComponent
+} from './periods/periods.module';
+import {
     SchoolsCreateComponent,
     SchoolsListComponent
 } from './schools/schools.module';
@@ -49,6 +52,10 @@ const routes : RouterConfig = [
             {
                 path        : 'groups/create',
                 component   : GroupsCreateComponent
+            },
+            {
+                path        : 'periods/list',
+                component   : PeriodsListComponent
             },
             {
                 path        : 'schools/list',

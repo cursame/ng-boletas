@@ -1,0 +1,1 @@
+export { PeriodsListComponent } from './periods-list.component';
