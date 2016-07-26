@@ -18,7 +18,8 @@ import {
     LoginComponent
 } from './sessions/sessions.module';
 import {
-    PeriodsListComponent
+    PeriodsListComponent,
+    PeriodsCreateComponent
 } from './periods/periods.module';
 import {
     SchoolsCreateComponent,
@@ -56,6 +57,10 @@ const routes : RouterConfig = [
             {
                 path        : 'periods/list',
                 component   : PeriodsListComponent
+            },
+            {
+                path        : 'periods/create',
+                component   : PeriodsCreateComponent
             },
             {
                 path        : 'schools/list',
