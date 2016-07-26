@@ -3,6 +3,7 @@
     "description"   : "Angular 2 web client for the cursame boletas service.",
     "dependencies"  : {
         "bootstrap"             : "3.3.6",
+        "bootstrap-datepicker"  : "1.6.1",
         "blueimp-file-upload"   : "9.12.1",
         "sweetalert"            : "1.1.3"
     },
