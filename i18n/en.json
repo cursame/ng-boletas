@@ -24,6 +24,7 @@
     "header.type"                   : "Type",
 
     "label.administrator"           : "Administrator",
+    "label.due_date"                : "Due Date",
     "label.email"                   : "Email",
     "label.group"                   : "Group",
     "label.name"                    : "Name",

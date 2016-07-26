@@ -1,5 +1,6 @@
 import {
-    Component
+    Component,
+    OnInit
 } from '@angular/core';
 import {
     Router,
@@ -23,6 +24,7 @@ import {
     SchoolsService
 } from '../schools/schools.module';
 
+declare var $ : any;
 declare var swal : any;
 
 @Component({
@@ -31,7 +33,7 @@ declare var swal : any;
     selector    : 'periods-create',
     templateUrl : 'views/periods/create.html'
 })
-export class PeriodsCreateComponent {
+export class PeriodsCreateComponent implements OnInit {
 
     period : Period     = new Period();
 
@@ -57,6 +59,15 @@ export class PeriodsCreateComponent {
             })
             .catch( error => {
                 swal( this._translate.instant( 'title.periods_creation' ), this._translate.instant( 'message.period_create_error' ), 'error' );
+            });
+    }
+
+    public ngOnInit() {
+        let that    = this;
+        $( '.datepicker' ).datepicker({
+                format  : 'dd/mm/yyyy'
+            }).on( 'changeDate', function ( e ) {
+                that.period.due_date    = e.date;
             });
     }
 

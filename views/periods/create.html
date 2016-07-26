@@ -24,6 +24,10 @@
                     <option *ngFor="let group of groups" value="{{ group._id }}">{{ group.name }}</option>
                 </select>
             </div>
+            <div class="form-group">
+                <label for="due_date">{{ 'label.due_date' | translate }}</label>
+                <input type="date" name="due_date" class="form-control datepicker" placeholder="DD/MM/YYYY">
+            </div>
         </form>
     </div>
 </div>
