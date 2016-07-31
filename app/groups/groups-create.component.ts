@@ -33,11 +33,13 @@ declare var swal : any;
 })
 export class GroupsCreateComponent {
 
-    group   : Group     = new Group();
+    group       : Group     = new Group();
 
-    schools : School[]  = [];
+    schools     : School[]  = [];
 
-    users   : User[]    = [];
+    students    : User[]    = [];
+
+    users       : User[]    = [];
 
     constructor( private _router : Router, private _service : GroupsService, private _schoolsService : SchoolsService, private _usersService : UsersService, private _translate : TranslateService ) {
         let query   = {
@@ -61,14 +63,31 @@ export class GroupsCreateComponent {
     }
 
     public schoolChanged( school ) {
-        let query   = {
+        let adminQuery      = {
             page        : 1,
             per_page    : 9999,
             school      : school,
             type        : 2
         };
 
-        this._usersService.query( query )
+        let studentsQuery   = {
+            page        : 1,
+            per_page    : 9999,
+            school      : school,
+            select      : 'name',
+            type        : 4
+        };
+
+        this._usersService.query( adminQuery )
             .then( users => this.users = users );
+
+        this._usersService.query( studentsQuery )
+            .then( students => this.students = students );
+    }
+
+    public studentsChanged( students ) {
+        this.group.students = Array.apply( null, students )
+            .filter( option => option.selected )
+            .map( option => option.value );
     }
 }

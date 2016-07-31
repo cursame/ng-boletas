@@ -18,6 +18,12 @@
                 </select>
             </div>
             <div class="form-group">
+                <label for="students">{{ 'label.students' | translate }}</label>
+                <select name="students" class="form-control" multiple (change)="studentsChanged($event.target.options)">
+                    <option *ngFor="let student of students" value="{{ student._id }}">{{ student.name }}</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="administrator">{{ 'label.administrator' | translate }}</label>
                 <select name="administrator" class="form-control" [(ngModel)]="group.administrator">
                     <option value="">{{ 'option.select_administrator' | translate }}</option>

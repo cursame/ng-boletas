@@ -43,8 +43,6 @@ export class CoursesCreateComponent {
 
     schools     : School[]  = [];
 
-    students    : User[]    = [];
-
     teachers    : User[]    = [];
 
     constructor( private _service : CoursesService, private _schoolsService : SchoolsService, private _groupsService : GroupsService, private _usersService : UsersService, private _router : Router, private _translate : TranslateService ) {
@@ -76,14 +74,6 @@ export class CoursesCreateComponent {
             select      : 'name'
         };
 
-        let studentsQuery   = {
-            page        : 1,
-            per_page    : 9999,
-            school      : school,
-            select      : 'name',
-            type        : 4
-        };
-
         let teachersQuery   = {
             page        : 1,
             per_page    : 9999,
@@ -95,16 +85,7 @@ export class CoursesCreateComponent {
         this._groupsService.query( groupsQuery )
             .then( groups => this.groups = groups );
 
-        this._usersService.query( studentsQuery )
-            .then( students => this.students = students );
-
         this._usersService.query( teachersQuery )
             .then( teachers => this.teachers = teachers );
-    }
-
-    public studentsChanged( students ) {
-        this.course.students    = Array.apply( null, students )
-            .filter( option => option.selected )
-            .map( option => option.value );
     }
 }
