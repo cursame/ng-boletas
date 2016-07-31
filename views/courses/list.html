@@ -24,7 +24,7 @@
                         <span class="dropdown">
                             <button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i></button>
                             <ul class="dropdown-menu">
-                                <li><a>{{ 'menu.details' | translate }}</a></li>
+                                <li><a [routerLink]="['/courses/details', course._id ]">{{ 'menu.details' | translate }}</a></li>
                                 <li><span (click)="remove( course._id, i )">{{ 'menu.remove' | translate }}</span></li>
                             </ul>
                         </span>

@@ -5,6 +5,7 @@ import {
 
 import {
     CoursesCreateComponent,
+    CoursesDetailsComponent,
     CoursesListComponent
 } from './courses/courses.module';
 import {
@@ -46,6 +47,10 @@ const routes : RouterConfig = [
             {
                 path        : 'courses/create',
                 component   : CoursesCreateComponent
+            },
+            {
+                path        : 'courses/details/:id',
+                component   : CoursesDetailsComponent
             },
             {
                 path        : 'groups/list',
