@@ -49,7 +49,7 @@ export class CommonService {
             .catch( this.handleError );
     }
 
-    public get( id : string, expanded : boolean ) {
+    public get( id : string, expanded : boolean = false ) {
         let params: URLSearchParams    = new URLSearchParams();
         params.set( 'session', this._session );
 
