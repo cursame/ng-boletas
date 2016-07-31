@@ -12,13 +12,14 @@ import {
 
 import {
     School,
-    SchoolsService
+    SchoolsService,
+    SchoolsFeaturesComponent
 } from './schools.module';
 
 declare var swal : any;
 
 @Component({
-    directives  : [ ROUTER_DIRECTIVES ],
+    directives  : [ ROUTER_DIRECTIVES, SchoolsFeaturesComponent ],
     providers   : [ SchoolsService ],
     selector    : 'schools-create',
     templateUrl : 'views/schools/create.html'

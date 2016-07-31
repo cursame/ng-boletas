@@ -1,5 +1,6 @@
 import {
     Component,
+    Input,
     OnInit
 } from '@angular/core';
 import {
@@ -14,22 +15,23 @@ import {
 
 import {
     School,
-    SchoolsService
+    SchoolsService,
+    SchoolsFeaturesComponent
 } from './schools.module';
 
 declare var swal : any;
 
 @Component({
-    directives  : [ ROUTER_DIRECTIVES ],
+    directives  : [ ROUTER_DIRECTIVES, SchoolsFeaturesComponent ],
     providers   : [ SchoolsService ],
     selector    : 'schools-details',
     templateUrl : 'views/schools/create.html'
 })
 export class SchoolsDetailsComponent implements OnInit {
 
-    public updating : Boolean   = true;
+    public updating : boolean   = true;
 
-    public school   : School      = new School();
+    public school   : School    = new School();
 
     private _sub    : any;
 
