@@ -57,7 +57,7 @@ export class CommonService {
             params.set( 'expanded', 'true' );
         }
 
-        return this._http.get( this.url + '/' + id, {
+        return this._http.get( `${ this.url }/${ id }`, {
                 search  : params,
                 headers : new Headers({
                     'Content-Type'  : 'application/json'
