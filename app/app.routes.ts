@@ -23,6 +23,7 @@ import {
 } from './periods/periods.module';
 import {
     SchoolsCreateComponent,
+    SchoolsDetailsComponent,
     SchoolsListComponent
 } from './schools/schools.module';
 import {
@@ -69,6 +70,10 @@ const routes : RouterConfig = [
             {
                 path        : 'schools/create',
                 component   : SchoolsCreateComponent
+            },
+            {
+                path        : 'schools/details/:id',
+                component   : SchoolsDetailsComponent
             },
             {
                 path        : 'users/list',
