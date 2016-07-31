@@ -1,0 +1,11 @@
+<label>Features</label>
+<div class="row" *ngFor="let feature of features">
+    <div class="form-group col-md-8">
+        <input type="text" name="feature" class="form-control" placeholder="{{ 'placeholder.feature' | translate }}" [(ngModel)]="feature.name">
+    </div>
+    <div class="form-group col-md-4">
+        <input type="number" name="value" class="form-control" placeholder="{{ 'placeholder.value' | translate }}" [(ngModel)]="feature.value">
+    </div>
+</div>
+<button class="btn btn-info" (click)="addFeature()" type="button">{{ 'btn.add_feature' | translate }}</button>
+<button class="btn btn-danger" (click)="removeFeature()" type="button">{{ 'btn.remove_feature' | translate }}</button>

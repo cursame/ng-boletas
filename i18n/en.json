@@ -1,5 +1,6 @@
 {
     "btn.add_course"                : "Add Course",
+    "btn.add_feature"               : "Add Feature",
     "btn.add_group"                 : "Add Group",
     "btn.add_period"                : "Add Period",
     "btn.add_school"                : "Add School",
@@ -11,6 +12,7 @@
     "btn.create_school"             : "Create School",
     "btn.create_user"               : "Create User",
     "btn.login"                     : "Login",
+    "btn.remove_feature"            : "Remove Feature",
     "btn.update_school"             : "Update School",
 
     "header.action"                 : "Action",
@@ -27,6 +29,7 @@
     "label.administrator"           : "Administrator",
     "label.due_date"                : "Due Date",
     "label.email"                   : "Email",
+    "label.features"                : "Features",
     "label.group"                   : "Group",
     "label.name"                    : "Name",
     "label.open_features"           : "Open features",
@@ -83,6 +86,9 @@
     "option.select_teacher"         : "Select teacher...",
     "option.select_type"            : "Select type...",
     "option.super"                  : "Super administrator",
+
+    "placeholder.feature"           : "Exam",
+    "placeholder.value"             : "80",
 
     "title.courses"                 : "Courses",
     "title.courses_create"          : "Create Course",
