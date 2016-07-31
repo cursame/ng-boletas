@@ -49,6 +49,27 @@ export class CommonService {
             .catch( this.handleError );
     }
 
+    public get( id : string, expanded : boolean ) {
+        let params: URLSearchParams    = new URLSearchParams();
+        params.set( 'session', this._session );
+
+        if ( expanded ) {
+            params.set( 'expanded', 'true' );
+        }
+
+        return this._http.get( this.url + '/' + id, {
+                search  : params,
+                headers : new Headers({
+                    'Content-Type'  : 'application/json'
+                })
+            })
+            .toPromise()
+            .then( res => {
+                return res.json();
+            })
+            .catch( this.handleError );
+    }
+
     public query( q : any ) {
          let params: URLSearchParams    = new URLSearchParams();
          params.set( 'session', this._session );
