@@ -108,6 +108,21 @@ export class CommonService {
             .catch( this.handleError );
     }
 
+    public update( id : string, data : any ) {
+        data['session'] = this._session;
+
+        return this._http.put( `${ this.url }/${ id }`, JSON.stringify( data ), {
+                headers : new Headers({
+                    'Content-Type'  : 'application/json'
+                })
+            })
+            .toPromise()
+            .then( res => {
+                return res.json();
+            })
+            .catch( this.handleError );
+    }
+
     private handleError( error : any ) {
         return Promise.reject( error.message || error );
     }
