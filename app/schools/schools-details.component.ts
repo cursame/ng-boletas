@@ -35,6 +35,17 @@ export class SchoolsDetailsComponent implements OnInit {
 
     constructor( private _router : Router, private _route : ActivatedRoute, private _schools : SchoolsService, private _translate : TranslateService ) {}
 
+    public create() {
+        this._schools.update( this.school._id, this.school )
+            .then( school => {
+                this._router.navigate([ '/schools/list' ]);
+                swal( this._translate.instant( 'title.schools_edition' ), this._translate.instant( 'message.school_updated' ), 'success' );
+            })
+            .catch( error => {
+                swal( this._translate.instant( 'title.schools_edition' ), this._translate.instant( 'message.school_update_error' ), 'error' );
+            });
+    }
+
     public ngOnInit() {
         this._sub   = this._route.params.subscribe( params => {
             this._schools.get( params['id'], true )
