@@ -13,7 +13,8 @@ import {
 } from './dashboard.component';
 import {
     GroupsListComponent,
-    GroupsCreateComponent
+    GroupsCreateComponent,
+    GroupsDetailsComponent
 } from './groups/groups.module';
 import {
     LoginComponent
@@ -59,6 +60,10 @@ const routes : RouterConfig = [
             {
                 path        : 'groups/create',
                 component   : GroupsCreateComponent
+            },
+            {
+                path        : 'groups/details/:id',
+                component   : GroupsDetailsComponent
             },
             {
                 path        : 'periods/list',

@@ -1,7 +1,11 @@
 <div class="section-header">
-    <h1>{{ 'title.groups_create' | translate }}</h1>
+    <h1 *ngIf="!updating">{{ 'title.groups_create' | translate }}</h1>
+    <h1 *ngIf="updating">{{ 'title.groups_update' | translate }}</h1>
     <a class="btn btn-info" [routerLink]="['/groups/list']">{{ 'btn.back' | translate }}</a>
-    <a class="btn btn-success" (click)="create()">{{ 'btn.create_group' | translate }}</a>
+    <a class="btn btn-success" (click)="create()">
+        <span *ngIf="!updating">{{ 'btn.create_group' | translate }}</span>
+        <span *ngIf="updating">{{ 'btn.update_group' | translate }}</span>
+    </a>
 </div>
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
